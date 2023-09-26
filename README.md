@@ -1,0 +1,37 @@
+# springboot_graphQL
+//-----------------------To fetch all the book details------------------------//
+query{
+    allBooks{
+        id
+        title
+        description
+        author
+        price
+    }
+}
+//-----------------------To get single Book Details------------------------//
+query{
+    getBook(bookId:1){
+        id
+        title
+     
+    }
+}
+//-----------------------To create a Book resource in Database------------------------//
+mutation{
+    createBook(book:{
+        title:"My Old Book",
+        description:"This is a practice book"
+        author:"Pankaj"
+        price:520
+        pages:421
+    }){
+    id
+    title
+    description
+    author
+    price
+    pages
+
+    }
+}
